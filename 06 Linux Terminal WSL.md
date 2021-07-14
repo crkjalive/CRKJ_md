@@ -10,6 +10,8 @@ sudo apt install python3-pip
 sudo apt install nodejs
 
 ### nodejs nvm 
+https://github.com/nvm-sh/nvm
+
 instala nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
