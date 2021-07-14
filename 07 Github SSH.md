@@ -8,13 +8,14 @@ ssh-keygen -t rsa //especifica el algoritmo
 passphrase: # contraseña con espacios 
 
 # comprobar el proceso y agregarlo a windows
-```eval $(ssh-agent -s)```
+eval $(ssh-agent -s)
 
 # agregamos la llave al entorno de windows
-```ssh-add ~/.ssh/id_rsa```
 
-#en mac 
-```
+> ssh-add ~/.ssh/id_rsa
+
+# en mac 
+
 eval "$(ssh-agent -s)"
 
 config
@@ -22,14 +23,13 @@ config
 		AddKeysToAgent yes
 		UseKeychain yes
 		IdentityFile ~/.ssh/id_rsa 
-```
 
 siempre debe haber llaves por equipo que se usa 
 
-```
+~~~
 git config -l 
 git config --global user.email "0soundlive@gmail.com"
-```
+~~~
 
 # agregar llaves a Github 
 1. settings
@@ -37,3 +37,28 @@ git config --global user.email "0soundlive@gmail.com"
 3. name
 4. id_rsa.pub ***codigo a pegar***
 5. agregar y listo
+
+# prueba de funcionamiento
+
+1. git clone repo 
+2. entramos al repo 
+3. creamos un archivo README.md para enviar
+4. git add .
+5. git commit -am "agregamos detalles"
+6. git push
+7. ya no pide contraseña ni nada para enviar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
