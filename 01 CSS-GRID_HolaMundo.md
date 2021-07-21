@@ -118,8 +118,8 @@ expandiendo el elemento en todo el ancho de su contenedor o la pantalla.
 tomara la cantidad de lineas que se le pasen
 ~~~
 .element {
-	grid-column: 1 / 6;
-	grid-row: 1 / 3;
+	grid-column: 1/6;
+	grid-row: 1/3;
 }
 ~~~
 
@@ -150,8 +150,12 @@ Excelente forma de posicionar elementos dentro de la grilla, nombrando cada line
 	grid-row: row-inicio / row-end 3;
 }
 ~~~
+
 ___
+
+
 revisar el tema de grillas
+
 ___
 
 # Areas de grillas 
@@ -174,10 +178,10 @@ grid-auto-rows:
 grid-auto-flow: row | column
 ~~~
 de esta manera seguira el flujo de los elementos en filas o columnas
-___
-propiedades de alineacion
+
 ___
 
+# propiedades de alineacion
 
 ### Alinear y distribuir contenido 
 justify-content
@@ -202,7 +206,7 @@ alineacion vertical con justify-self, en el elemento
 1. align-self: center;
 2. align-self: start;
 3. align-self: end;
-4. align-self: end;
+4. align-self: stretch;
 
 alineacion en el centro
 1. align-self: center;
@@ -224,9 +228,21 @@ verticalmente
 4. align-content: space-around;
 5. align-content: space-between;
 6. align-content: space-evenly;
+___
 
+# Wiki
+### Keyword values 
+1. align-self: auto;
+2. align-self: flex-start;
+3. align-self: flex-end;
+4. align-self: center;
+5. align-self: baseline;
+6. align-self: stretch;
 
-
+### Global values
+1. align-self: inherit;
+2. align-self: initial;
+3. align-self: unset;
 
 
 

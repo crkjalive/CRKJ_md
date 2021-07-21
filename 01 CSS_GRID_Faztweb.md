@@ -16,6 +16,7 @@
 2. %
 3. auto
 4. em
+5. fr
 
 ### fracciones
 1. 1fr 1fr 1fr 1fr ***divide pantalla entre 4***
@@ -56,4 +57,3 @@ Se le debe aplicar a la clase del elemento
 1. grid-column: 1/4 ***ancho de la linea 1 hasta la 4***
 2. grid-row: 1/3 ***alto del elemento desde la linea 1 hasta la 3***
 
-# queda faltando la grilla de area del curso de Hola Mundo.
