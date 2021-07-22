@@ -56,6 +56,12 @@ nmap <leader>nt :NERDTreeFind<CR>
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
 
+" Invertir las teclas de subir y bajar"
+noremap k j
+noremap j k
+
+
+
 " Comandos Nvim "
 inoremap ( ()<Esc>i
 inoremap { {<CR><CR>}<Esc>ki  
@@ -75,7 +81,7 @@ inoremap name<CR> name=""<Esc>i
 
 
 " Comandos para Javascript "
-inoremap use<CR> 'use strict'<CR><CR><CR><CR><CR><CR><CR><CR><CR><Esc>7ki
+inoremap use<CR> 'use strict'<CR><CR>window.addEventListener('load', () => {<CR><CR>});<CR><CR><CR><CR><CR><CR><CR><CR><Esc>9ki
 inoremap ~<CR> const  = () => {<CR><CR>}<Esc>0kk6li
 inoremap => () => {<CR><CR>}<Esc>ka  
 
@@ -93,6 +99,8 @@ inoremap di<CR> document.getElementById('');<Esc>3ha
 
 
 " Comandos para CSS "
+inoremap med<CR> @media screen and (min-width 768px){<CR><CR>}<Esc>ki
+
 inoremap css<CR> *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-family:'arial';}<CR>a{text-decoration:none;}<CR>li{list-style:none;}<CR>ul{display:flex;}<CR><Esc>
 
 inoremap .css<CR> .css[type="submit"]{background:dodgerblue;color:gold;width:100vh;height:100vw;text-align:right left;font-size:16px;display:block flex grid;position:relative absolute fixed;margin:auto;cursor:pointer;vertical-align: top super bottom sub middle baseline;border-radius:50%;grid-template-columns:repeat(1, 1fr);grid-template-rows: minmax(2em, auto);grid-gap:.5em 1em;grid-column-start:1;grid-column-end:1;grid-row-start:1;grid-row-end:1;align-content:space-evenly;align-self:end;align-items:center;justify-content: space-around space-between;justify-self: stretch;justify-items: start;justify-content:end;justify-self:start;order:1;flex-direction:row-reverse;flex-wrap:wrap row nowrap;align-items:flex-start flex-end;}<CR><Esc>
@@ -136,8 +144,14 @@ inoremap pps<CR> <input type="submit" id="btn_submit" class="btn_submit" placeho
 inoremap ñññ<CR> <!DOCTYPE html><CR><html lang="es"><CR><head><CR><meta charset="UTF-8"/><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"/><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"/><CR><title>pagina en construccion</title><CR></head><CR><body><CR><header id="" class="header" ></header><CR><section id="" class="section"></section><CR><footer id="footer" class="footer"></footer><CR></body><CR></html><CR><Esc>
 
 
-<form id="" class="" action="" method="">
-<input type="submit" id="btn_submit" class="btn_submit" placeholder="" />
-</form>
+
+
+
+
+
+
+
+
+
 
 
