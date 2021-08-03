@@ -1,8 +1,8 @@
 " Seteo basico "
 set number
 set mouse=a
-set clipboard=unnamed
 set numberwidth=1
+set clipboard+=unnamedplus
 syntax enable
 set showcmd
 set ruler
@@ -11,6 +11,9 @@ set showmatch
 set sw=2
 set relativenumber
 set laststatus=2
+set linebreak
+set title
+set noswapfile
 
 
 " bloque de plugins a instalar "
@@ -31,6 +34,9 @@ Plug 'mattn/emmet-vim'
 
 " autocompletado de palabras "
 Plug 'neoclide/coc.nvim'
+
+" Multiple seleccion ctrl n"
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Theme "
 Plug 'morhetz/gruvbox'
@@ -96,6 +102,9 @@ inoremap ad<CR> addEventListener('click', () => {<CR><CR>});<Esc>ka
 inoremap do<CR> document.querySelector('');<Esc>3ha
 inoremap di<CR> document.getElementById('');<Esc>3ha
 
+inoremap js<CR> let js="textContent createElement value appendChild append innerHTML style className getElementsByClassName getElementsByTagName querySelectorAll querySelector document.write backgroundColor padding textAlign border color fontSize textTransform createTextNode window location open url href innerHeight innerWidth screen height width click blur change focus mouseover mouseout onclick keydown keypress keyup String.fromCharCode(event.keyCode) setInterval setTimeout clearInterval"<CR><Esc>
+
+
 
 
 " Comandos para CSS "
@@ -137,21 +146,11 @@ inoremap h5<CR> <h5 class="h5" ></h5><Esc>4hi
 inoremap h6<CR> <h6 class="h6" ></h6><Esc>4hi
 
 inoremap fm<CR> <form id="" class="" action="" method=""><CR><CR></form><Esc>ki
-inoremap lbl<CR> <label id="" class="" for=""><label><Esc>bhi
-inoremap pp<CR> <input type="" id="" class="" placeholder="" /><Esc>8b2hi
-inoremap pps<CR> <input type="submit" id="btn_submit" class="btn_submit" placeholder="" /><Esc>04wa
+inoremap lbl<CR> <label for=""><label><Esc>8hi
+inoremap btn<CR> <button></button><Esc>2bli
+inoremap pp<CR> <input  <CR>id=""<CR>class=""<CR>type="text"<CR>name=""<CR>placeholder=""<CR>>
+inoremap pps<CR> <input type="submit" value="enviar"/><Esc>
 
 inoremap ñññ<CR> <!DOCTYPE html><CR><html lang="es"><CR><head><CR><meta charset="UTF-8"/><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"/><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"/><CR><title>pagina en construccion</title><CR></head><CR><body><CR><header id="" class="header" ></header><CR><section id="" class="section"></section><CR><footer id="footer" class="footer"></footer><CR></body><CR></html><CR><Esc>
-
-
-
-
-
-
-
-
-
-
-
 
 
