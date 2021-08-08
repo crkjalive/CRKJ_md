@@ -70,11 +70,12 @@ noremap j k
 
 " Comandos Nvim "
 inoremap ( ()<Esc>i
-inoremap { {<CR><CR>}<Esc>ki  
+inoremap { {}<Esc>i
 inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
+inoremap }<CR> ``<Esc>i
 inoremap $<CR> `${}`<Esc>2ha
 inoremap ppp<CR> print()<Esc>i
 inoremap ppl<CR> console.log();<Esc>hi
@@ -148,7 +149,7 @@ inoremap h6<CR> <h6 class="h6" ></h6><Esc>4hi
 inoremap fm<CR> <form id="" class="" action="" method=""><CR><CR></form><Esc>ki
 inoremap lbl<CR> <label for=""><label><Esc>8hi
 inoremap btn<CR> <button></button><Esc>2bli
-inoremap pp<CR> <input  <CR>id=""<CR>class=""<CR>type="text"<CR>name=""<CR>placeholder=""<CR>>
+inoremap pp<CR> <input<CR>id=""<CR>class=""<CR>type="text"<CR>name=""<CR>placeholder=""<CR>>
 inoremap pps<CR> <input type="submit" value="enviar"/><Esc>
 
 inoremap ñññ<CR> <!DOCTYPE html><CR><html lang="es"><CR><head><CR><meta charset="UTF-8"/><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"/><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"/><CR><title>pagina en construccion</title><CR></head><CR><body><CR><header id="" class="header" ></header><CR><section id="" class="section"></section><CR><footer id="footer" class="footer"></footer><CR></body><CR></html><CR><Esc>
