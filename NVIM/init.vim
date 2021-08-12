@@ -8,7 +8,7 @@ set showcmd
 set ruler
 set encoding=utf-8
 set showmatch
-set sw=2
+set sw=1
 set relativenumber
 set laststatus=2
 set linebreak
@@ -75,21 +75,27 @@ inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
-inoremap }<CR> ``<Esc>i
 inoremap $<CR> `${}`<Esc>2ha
+
+
+
+" Comandos Markdown "
+inoremap }}}<CR> ~~~<CR><CR>~~~<Esc>ki
+inoremap }}<CR> ``````<Esc>3ha
+inoremap }<CR> ``<Esc>i
+
+
+
+" Comandos Python "
+inoremap run<CR> if __name__ == '__main__':<CR>run()<Esc>i
 inoremap ppp<CR> print()<Esc>i
-inoremap ppl<CR> console.log();<Esc>hi
-inoremap cl<CR> class="" <Esc>2ha
-inoremap id<CR> id="" <Esc>2ha
-inoremap href href=""<Esc>i
-inoremap type<CR> type=""<Esc>i
-inoremap name<CR> name=""<Esc>i
 
 
 
 " Comandos para Javascript "
+inoremap ppl<CR> console.log();<Esc>hi
 inoremap use<CR> 'use strict'<CR><CR>window.addEventListener('load', () => {<CR><CR>});<CR><CR><CR><CR><CR><CR><CR><CR><Esc>9ki
-inoremap ~<CR> const  = () => {<CR><CR>}<Esc>0kk6li
+inoremap const<CR> const  = () => {<CR><CR>}<Esc>0kk6li
 inoremap => () => {<CR><CR>}<Esc>ka  
 
 " for while if "
@@ -107,7 +113,6 @@ inoremap js<CR> let js="textContent createElement value appendChild append inner
 
 
 
-
 " Comandos para CSS "
 inoremap med<CR> @media screen and (min-width 768px){<CR><CR>}<Esc>ki
 
@@ -118,7 +123,12 @@ inoremap .css<CR> .css[type="submit"]{background:dodgerblue;color:gold;width:100
 
 
 " Comandos para HTML"
-inoremap html<CR> <html></html><Esc>6hi
+inoremap cl<CR> class="" <Esc>2ha
+inoremap id<CR> id="" <Esc>2ha
+inoremap href href=""<Esc>i
+inoremap type<CR> type=""<Esc>i
+inoremap name<CR> name=""<Esc>i
+noremap html<CR> <html></html><Esc>6hi
 inoremap head<CR> <head></head><Esc>6hi
 inoremap body<CR> <body></body><Esc>6hi
 
