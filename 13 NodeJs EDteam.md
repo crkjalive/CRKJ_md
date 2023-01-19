@@ -953,7 +953,7 @@ debemos tener claro si la peticion es ***GET*** o ***POST***, para entender por 
 las rutas me llevan a la funcionalidad a ejecutar  
 las funcionalidades ejecutan la funcionalidad cuando se ejecuta la ruta  
 
-***modulos pendientes del curso***
+***modulos pendientes del curso de NodeJs by EDteam***
 
 # Modulo NoSQL 
 
