@@ -1,90 +1,28 @@
-# SQL Comandos
-### Eliminar la base de datos
-~~~
-DROP DATABASE MyDataBase;
-~~~
+# SQL
+1. CREATE DATABASE MyDataBase; ***Crea una base de datos nueva***
+2. DROP DATABASE MyDataBase; ***Eliminar la base de datos***
+3. USE MyDataBase; ***Use DATABASE como base de datos***
+4. TRUNCATE MyTable; ***Limpia los datos de la tabla a cero***
+5. DROP TABLE MyTable; ***Elimina tabla***
+6. CREATE TABLE MyTable(id(int) PRIMARY KEY AUTO_INCREMENT, username varchar(50), email varchar(100)); ***Crear tablas***
+7. ALTER TABLE MyTable DROP COLUMN edad; ***Eliminar la columna***
+8. ALTER TABLE MyTable ADD edad INT; ***Agregar columna***
+9. ALTER TABLE MyTable MODIFY COLUMN email varchar(50); ***Modificar el tipo de dato***
+10. ALTER TABLE MyTable ADD primary key (id); ***Agregar llave primaria***
+11. ALTER TABLE MyTable MODIFY COLUMN id INT auto_increment; ***Agrega autoincremental al id***
 
-### Crea una base de datos nueva
-~~~
-CREATE DATABASE MyDataBase;
-~~~
+# Consultas
+***LEER registros (WHERE) condiciona***  
+SELECT * FROM MyTable;  
+SELECT * FROM MyTable WHERE email='chanchito@correo.com';  
+SELECT * FROM MyTable WHERE edad > 21;
 
-### Use DATABASE como base de datos
-~~~
-USE MyDataBase;
-~~~
+***INSERTAR registro***  
+INSERT INTO MyTable(email, username, edad) VALUES ('jared@correo.com', 'Jared', 1);
 
-### Elimina tabla
-~~~
-DROP TABLE my_table;
-~~~
+***ACTUALIZAR registro (WHERE) solo el registro***  
+UPDATE MyTable SET email = 'felix@correo.com' WHERE id='18'; 
 
-### Limpia los datos de la tabla a cero
-~~~
-TRUNCATE my_table;
-~~~
-
-### Crear tablas
-~~~
-CREATE TABLE my_table(id int, email varchar(255), username varchar (50));
-~~~
-
-### Eliminar la columna
-~~~
-ALTER TABLE my_table DROP COLUMN edad;
-~~~
-
-### Agregar columna
-~~~
-ALTER TABLE my_table ADD edad INT;
-~~~
-
-### Modificar el tipo de dato
-~~~
-ALTER TABLE my_table MODIFY COLUMN email varchar(50);
-~~~
-
-### Agregar llave primaria
-~~~
-ALTER TABLE my_table ADD primary key (id);
-~~~
-
-### Agrega autoincremental al id
-~~~
-ALTER TABLE my_table MODIFY COLUMN id INT auto_increment;
-~~~
-
-# Consultas SQL
-
-### INSERTAR registro
-~~~
-INSERT INTO my_table(email, username, edad)
-VALUES ('jared@correo.com', 'Jared', 1);
-~~~
-
-### ELIMINAR registro (limita a 1 solo)
-~~~
-DELETE FROM my_table WHERE email = 'chanchito@correo.com' limit 1; 
-~~~
-
-### LEER registros (buscar todos los registros y buscar por email especifico)
-~~~
-SELECT * FROM my_table;
-SELECT * FROM my_table WHERE email='chanchito@correo.com'; 
-~~~
-
-### BUSCAR condicionando la consulta
-~~~
-SELECT * FROM my_table WHERE edad > 21;
-~~~
-
-### ACTUALIZAR registro (WHERE previene actualizar todos los registros de la tabla)
-~~~
-UPDATE my_table SET email = 'felix@correo.com' WHERE id = '18'; 
-~~~
-
-### ELIMINAR (pendiente de WHERE)
-~~~
-DELETE FROM my_table WHERE id ='2';
-~~~
-
+***ELIMINAR registro (limita a 1 solo)***  
+DELETE FROM MyTable WHERE email = 'chanchito@correo.com' limit 1;  
+DELETE FROM MyTable WHERE id='2';
