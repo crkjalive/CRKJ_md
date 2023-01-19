@@ -1,67 +1,90 @@
-### eliminar la base de datos
-- drop database prueba;
+# SQL Comandos
+### Eliminar la base de datos
+~~~
+DROP DATABASE MyDataBase;
+~~~
 
-### crea una base de datos nueva
-- create database prueba;
+### Crea una base de datos nueva
+~~~
+CREATE DATABASE MyDataBase;
+~~~
 
-### usar prueba como base de datos
-- use prueba;
+### Use DATABASE como base de datos
+~~~
+USE MyDataBase;
+~~~
 
-### elimina tabla
-- drop table usuario;
+### Elimina tabla
+~~~
+DROP TABLE my_table;
+~~~
 
-### limpia los datos de la tabla a cero
-- truncate usuario;
+### Limpia los datos de la tabla a cero
+~~~
+TRUNCATE my_table;
+~~~
 
-### crear tablas
-- create table usuario(id int, email varchar(255), username varchar (50));
+### Crear tablas
+~~~
+CREATE TABLE my_table(id int, email varchar(255), username varchar (50));
+~~~
 
-### eliminar la columna
-- alter table usuario drop column edad;
+### Eliminar la columna
+~~~
+ALTER TABLE my_table DROP COLUMN edad;
+~~~
 
-### agregar columna
-- alter table usuario add edad int;
+### Agregar columna
+~~~
+ALTER TABLE my_table ADD edad INT;
+~~~
 
-### modificar el tipo de dato
-- alter table usuario modify column email varchar(50);
+### Modificar el tipo de dato
+~~~
+ALTER TABLE my_table MODIFY COLUMN email varchar(50);
+~~~
 
-### agregar llave primaria
-- alter table usuario add primary key (id);
+### Agregar llave primaria
+~~~
+ALTER TABLE my_table ADD primary key (id);
+~~~
 
-### agrega autoincremental al id
-- alter table usuario modify column id int auto_increment;
+### Agrega autoincremental al id
+~~~
+ALTER TABLE my_table MODIFY COLUMN id INT auto_increment;
+~~~
 
-### Consultas SQL
+# Consultas SQL
 
 ### INSERTAR registro
 ~~~
-insert into usuario(email, username, edad)
-values ('jared@correo.com', 'Jared', 1);
+INSERT INTO my_table(email, username, edad)
+VALUES ('jared@correo.com', 'Jared', 1);
 ~~~
 
 ### ELIMINAR registro (limita a 1 solo)
 ~~~
-delete from usuario where email = 'chanchito@correo.com' limit 1; 
+DELETE FROM my_table WHERE email = 'chanchito@correo.com' limit 1; 
 ~~~
 
 ### LEER registros (buscar todos los registros y buscar por email especifico)
 ~~~
-select * from usuario;
-select * from usuario where email='chanchito@correo.com'; 
+SELECT * FROM my_table;
+SELECT * FROM my_table WHERE email='chanchito@correo.com'; 
 ~~~
 
-### Buscar condicionando la consulta
+### BUSCAR condicionando la consulta
 ~~~
-select * from usuario where edad > 21;
+SELECT * FROM my_table WHERE edad > 21;
 ~~~
 
-### ACTUALIZAR registro (where previene actualizar todos los registros de la tabla)
+### ACTUALIZAR registro (WHERE previene actualizar todos los registros de la tabla)
 ~~~
-update usuario set email = 'felix@correo.com' where id = '18'; 
+UPDATE my_table SET email = 'felix@correo.com' WHERE id = '18'; 
 ~~~
 
 ### ELIMINAR (pendiente de WHERE)
 ~~~
-delete from usuario where id ='2';
+DELETE FROM my_table WHERE id ='2';
 ~~~
 
