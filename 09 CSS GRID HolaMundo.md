@@ -4,10 +4,10 @@
 
 ***CSS que se aplica***
 
-|elemento |propiedad |valor |
+|elemento|propiedad|valor|
 |-|-|-|
-|.contenedor | display: grid; | vuelve el contendor en una grilla |
-|.elemento | | se le aplican los estilos|	
+|.contenedor|display:grid;|vuelve el contendor en una grilla|
+|.elemento|margin:0 auto|se le aplican los estilos|	
 
 ### Ejemplo básico
 
@@ -32,10 +32,10 @@
 
 ### Columnas y Filas
 
-|elemento |propiedad |valor |
+|elemento|propiedad|valor|
 |-|-|-|
-|.contenedor | grid-template-rows: | se le da el ancho a las filas |
-|.contenedor | grid-template-columns: | se le da el ancho a las columnas |
+|.contenedor|grid-template-rows:|se le da el ancho a las filas|
+|.contenedor|grid-template-columns:|se le da el ancho a las columnas|
 
 ~~~
 .grid{
@@ -48,19 +48,19 @@
 3. estos valores son fijos
 
 ### Metodo en fracciones
-1. toma y divide el total del contenedor en fracciones 
+toma y divide el total del contenedor en fracciones 
 ~~~
 .grid{
 	grid-template-columns: 1fr 2fr 3fr; // 6 fracciones en total
 }
 ~~~
 
-| medidas | propiedad |
-|-|-|-|
-| % | porcentaje|
-| rem em | relacion a la fuente |
-| px | pixeles |
-| fr | fracciones |
+|medidas|propiedad|
+|-|-|
+|%|porcentaje|
+|rem em|relacion a la fuente|
+|px|pixeles|
+|fr|fracciones|
 
 ~~~
 .grid{
@@ -68,8 +68,9 @@
 }
 ~~~
 
-### Tamaños minimos y maximos de la columna o fila con la funcion minmax()
-con la funcion minmax podemos setiar el valor minimo, y un valor maximo 
+### minmax()
+Tamaños minimos y maximos de la columna o fila con la funcion minmax()  
+con la funcion minmax podemos setiar el valor minimo, y un valor maximo  
 ~~~
 .grid{
 	grid-template-rows: minmax(100px, auto);
@@ -86,27 +87,26 @@ con la funcion minmax podemos setiar el valor minimo, y un valor maximo
 ~~~
 
 ### Brechas entre elementos
-espacio entre los elementos
+***espacio entre los elementos***
 ~~~
 grid-row-gap: 20px;
 grid-column-gap: 10px;
 ~~~
 
-alternativa simplificada
+***alternativa simplificada***
 ~~~
 grid-gap: 20px 10px;
 ~~~
 
 ### Expandir elementos en la grilla
 se le aplica a el elemento y no al contenedor
-
 1. grid-column-start
 2. grid-column-end
 3. grid-row-start
 4. grid-row-end
 
-tomara desde la columna 1 hasta la ultima columna,  
-expandiendo el elemento en todo el ancho de su contenedor o la pantalla.
+tomara desde la columna 1 hasta la ultima columna expandiendo  
+el elemento en todo el ancho de su contenedor o la pantalla.
 ~~~
 .header {
 	grid-column-start: 1;
@@ -123,7 +123,7 @@ tomara la cantidad de lineas que se le pasen
 }
 ~~~
 
-# Asignando nombres a las lineas de la grilla
+### Asignando nombres a las lineas de la grilla
 De esta manera podemos definir el ancho y el alto de nuestra filas y columnas
 ~~~
 .grid {
@@ -138,28 +138,21 @@ De esta manera podemos definir el ancho y el alto de nuestra filas y columnas
 ~~~
 
 ### Usando repeat para lineas predecibles 
-Excelente forma de posicionar elementos dentro de la grilla, nombrando cada linea de la grilla.
+Excelente forma de posicionar elementos dentro de la grilla  
+nombrando cada linea de la grilla.  
 ~~~
 .grid {
 	grid-template-rows: repeat(2, [row-inicio] 50px [row-fin]);
 	grid-template-columns: repeat(3, [col-1-inicio] 1fr [col-2-end]);
 }
-
 .header {
 	grid-column: col-inicio / col-end 3;
 	grid-row: row-inicio / row-end 3;
 }
 ~~~
 
-___
-
-
-revisar el tema de grillas
-
-___
-
 # Areas de grillas 
-De esta forma lo que hace es dividir por areas el contenedor de la página
+De esta forma lo que hace es dividir por areas el contenedor de la página  
 ~~~
 grid-template-areas:"header header"
 					"content sidebar"
@@ -168,52 +161,53 @@ grid-template-areas:"header header"
 grid-template-rows: 150px 1fr 100px;
 grid-template-columns: 1fr 200px;
 ~~~
-Así se declarar grillas de forma explicita,  
-donde definimos que queremos que tenga un comportamiento determinado
+Así se declarar grillas de forma explicita  
+donde definimos que queremos que tenga un comportamiento determinado  
 
-### Grillas
-implicitas: es el comportamiento que no se allan definido, lo que seguira apareciendo despues de lo definido.
+## Grillas
+implicitas: es el comportamiento que no se allan definido  
+lo que seguira apareciendo despues de lo definido.  
 ~~~
 grid-auto-rows:
 grid-auto-flow: row | column
 ~~~
 de esta manera seguira el flujo de los elementos en filas o columnas
 
-___
-
 # propiedades de alineacion
 
 ### Alinear y distribuir contenido 
-justify-content
+
+***justify-content***  
 1. justify-items:center;
 2. justify-items:start;
 3. justify-items:end;
 4. justify-items:stretch;
 
-align-items
+***Align-items***  
 1. align-items: start;
 2. align-items: center;
 3. align-items: stretch;
 4. align-items: end;
 
-alineacion horizontal con justify-self, en el elemento
+***Alineacion horizontal con justify-self, en el elemento***
 1. justify-self: start;
 2. justify-self: center;
 3. justify-self: end;
 4. justify-self: stretch;
 
-alineacion vertical con justify-self, en el elemento
+***Alineacion vertical con justify-self, en el elemento***
 1. align-self: center;
 2. align-self: start;
 3. align-self: end;
 4. align-self: stretch;
 
-alineacion en el centro
+***Alineacion en el centro***
 1. align-self: center;
 2. justify-self: center;
 
-### Alineando grilla completa
-En la grilla
+## Alineando grilla completa
+
+***En la grilla***
 1. justify-content: start;
 2. justify-content: end;
 3. justify-content: center;
@@ -221,17 +215,15 @@ En la grilla
 5. justify-content: space-between;
 6. justify-content: space-evenly;
 
-verticalmente
+***Verticalmente***
 1. align-content: start;
 2. align-content: end;
 3. align-content: center;
 4. align-content: space-around;
 5. align-content: space-between;
 6. align-content: space-evenly;
-___
 
-# Wiki
-### Keyword values 
+***Keyword values*** 
 1. align-self: auto;
 2. align-self: flex-start;
 3. align-self: flex-end;
@@ -239,11 +231,7 @@ ___
 5. align-self: baseline;
 6. align-self: stretch;
 
-### Global values
+***Global values***
 1. align-self: inherit;
 2. align-self: initial;
 3. align-self: unset;
-
-
-
-
