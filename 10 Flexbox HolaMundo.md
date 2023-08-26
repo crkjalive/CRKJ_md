@@ -1,6 +1,6 @@
 # Flexbox
 1. Diseñado y pensado en 2 dimensiones X y Y 
-2. se basa en un contenedor con items
+2. Se basa en un contenedor con items
 
 ~~~
 .flex {
@@ -10,7 +10,6 @@
 ~~~
 
 ### Flex direction
-
 1. flex-direction: row;
 2. flex-direction: row-reverse;
 3. flex-direction: column;
@@ -45,9 +44,9 @@
 5. align-content: space-between;
 6. align-content: space-evenly;
 
-### Manipular orden de los elementos
-order: se ordena cada item dentro de su contenedor, en la posicion que se desee.
-1. order: 1;
+### Manipular orden de los elementos dentro del contenedor
+1. order: se ordena cada item dentro de su contenedor, en la posicion que se desee.
+2. order: 1;
 
 ### Como hacer que los elementos usen mas espacio
 default es 0, asi que creceran los elementos de manera proporcional
