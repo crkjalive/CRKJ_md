@@ -1,3 +1,10 @@
+# Instalar xampp en ubuntu
+### cambiar permisos de instalador  
+> chmod 755 xampp-linux-*-installer.run
+
+### ejecutar el instalador
+> sudo ./xampp-linux-*-installer.run
+
 # levantar xampp
 sudo /opt/lampp/lampp start
 
