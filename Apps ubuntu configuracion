@@ -1,0 +1,21 @@
+# instalar app en Ubuntu
+
+#### xammp
+
+1. descargar archivo
+2. terminal -> chmod +x xammp.run
+3. sudo ./xammp.run
+~~~
+sudo /opt/lampp/lampp start
+~~~
+
+#### nvm y nodejs  
+
+1. sudo apt update
+2. sudo apt install curl -y
+3. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+4. source ~/.bashrc
+5. nvm --version
+6. nvm install --lts
+7. nvm ls
+8. nvm use 24.16.0
